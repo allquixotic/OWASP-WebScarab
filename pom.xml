@@ -55,6 +55,13 @@
                     </execution>
                 </executions>
             </plugin>
+	    <plugin>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<configuration>
+                	    <source>1.5</source>
+	                    <target>1.5</target>
+		</configuration>
+	    </plugin>
         </plugins>
     </build>
     <dependencies>
@@ -171,26 +178,14 @@
     </properties>
     <repositories>
         <repository>
-            <id>eviware</id>
-            <url>http://www.eviware.com/repository/maven2/</url>
-        </repository>
-        <repository>
-            <id>jboss</id>
-            <url>http://repository.jboss.org/maven2/</url>
-        </repository>
-        <repository>
-            <id>jahia</id>
-            <url>http://maven.jahia.org/maven2/</url>
-        </repository>
-        <repository>
-            <id>opennms</id>
-            <url>http://repo.opennms.org/maven2/</url>
+            <id>tq</id>
+            <url>http://tiyukquellmalz.org:8081/nexus/content/repositories/webscarab-deps/</url>
         </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
-            <id>dstovall.org</id>
-            <url>http://dstovall.org/maven2/</url>
+            <id>onejar-maven-plugin.googlecode.com</id>
+            <url>http://onejar-maven-plugin.googlecode.com/svn/mavenrepo</url>
         </pluginRepository>
     </pluginRepositories>
 </project>

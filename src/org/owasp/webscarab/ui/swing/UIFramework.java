@@ -60,6 +60,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.plaf.TextUI;
@@ -110,6 +111,18 @@ public class UIFramework extends JFrame {
     private Object _exit = new Object();
     
     private File _tempDir = null;
+
+	static
+	{
+		try
+		{
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		}
+		catch(Throwable thrw)
+		{
+
+		}
+	}
     
     /** Creates new form WebScarab */
     public UIFramework(Framework framework) {
